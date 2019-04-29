@@ -1,5 +1,9 @@
-import React, { Component } from 'react';
+// vendors
+import React, { Component, Fragment } from 'react';
 import { render } from 'react-dom';
+
+// components
+import { Header } from './components';
 
 class App extends Component {
   state = {
@@ -16,7 +20,10 @@ class App extends Component {
   render() {
     const { posts } = this.state;
     return (
-      <p>{posts[0].text}</p>
+      <Fragment>
+        <Header>RocketBook</Header>
+        <p>{posts[0].text}</p>
+      </Fragment>
     );
   }
 }

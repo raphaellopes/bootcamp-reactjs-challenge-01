@@ -9,13 +9,16 @@ module.exports = {
     path: publicPath,
     filename: 'bundle.js',
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   devServer: {
     contentBase: publicPath,
   },
 
   module: {
     rules: [{
-      test: /\.js$/,
+      test: /\.(js|jsx)$/,
       exclude: /node_modules/,
       use: {
         loader: 'babel-loader',
