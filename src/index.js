@@ -3,7 +3,10 @@ import React, { Component, Fragment } from 'react';
 import { render } from 'react-dom';
 
 // components
-import { Header } from './components';
+import {
+  Header,
+  PostList,
+} from './components';
 
 class App extends Component {
   state = {
@@ -22,7 +25,11 @@ class App extends Component {
     return (
       <Fragment>
         <Header>RocketBook</Header>
-        <p>{posts[0].text}</p>
+        <PostList>
+          {posts.map(post => (
+            <li>{post.text}</li>
+          ))}
+        </PostList>
       </Fragment>
     );
   }
