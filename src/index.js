@@ -29,6 +29,7 @@ class App extends Component {
 
   render() {
     const { posts } = this.state;
+
     return (
       <Fragment>
         <Header>RocketBook</Header>

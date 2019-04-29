@@ -17,4 +17,8 @@ PostHeader.propTypes = {
   postTime: string.isRequired,
 };
 
+PostHeader.defaultProps = {
+  authorAvatar: '',
+};
+
 export default PostHeader;
