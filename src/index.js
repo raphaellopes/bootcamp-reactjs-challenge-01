@@ -14,10 +14,16 @@ class App extends Component {
     posts: [{
       author: {
         name: 'Rasta',
-        avatar: 'image',
+        avatar: 'https://avataaars.io/?avatarStyle=Circle&topType=LongHairCurvy&accessoriesType=Wayfarers&hairColor=Black&facialHairType=BeardMagestic&facialHairColor=BrownDark&clotheType=ShirtCrewNeck&clotheColor=Gray01&eyeType=Squint&eyebrowType=SadConcernedNatural&mouthType=ScreamOpen&skinColor=Pale',
       },
       date: '2019-04-29',
       text: 'asdasd ad asdas das das dasd asd asd a',
+    }, {
+      author: {
+        name: 'Other user',
+      },
+      date: '2019-04-29',
+      text: 'asdasd ad asdas das das dasd asd asd aasdasd ad asdas das das dasd asd asd a',
     }],
   }
 
