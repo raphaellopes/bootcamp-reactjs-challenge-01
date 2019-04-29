@@ -6,6 +6,7 @@ import { render } from 'react-dom';
 import {
   Header,
   PostList,
+  Post,
 } from './components';
 
 class App extends Component {
@@ -26,8 +27,8 @@ class App extends Component {
       <Fragment>
         <Header>RocketBook</Header>
         <PostList>
-          {posts.map(post => (
-            <li>{post.text}</li>
+          {posts.map((post, key) => (
+            <Post key={`post-${key + 1}`} data={post} />
           ))}
         </PostList>
       </Fragment>
