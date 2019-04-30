@@ -1,8 +1,12 @@
+// vendor
 import React from 'react';
 import { string } from 'prop-types';
 
-const Header = ({ children, ...props }) => (
-  <header {...props}>
+// locals
+import './styles.scss';
+
+const Header = ({ children }) => (
+  <header className="post-header">
     {children}
   </header>
 );

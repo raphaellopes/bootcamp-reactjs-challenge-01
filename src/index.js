@@ -9,6 +9,8 @@ import {
   Post,
 } from './components';
 
+import './global.scss';
+
 class App extends Component {
   state = {
     posts: [{

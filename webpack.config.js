@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const rootPath = path.resolve(__dirname);
 const publicPath = path.resolve(rootPath, 'public');
@@ -16,6 +17,13 @@ module.exports = {
     contentBase: publicPath,
   },
 
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
+  ],
+
   module: {
     rules: [{
       test: /\.(js|jsx)$/,
@@ -23,6 +31,20 @@ module.exports = {
       use: {
         loader: 'babel-loader',
       },
+    }, {
+      test: /.scss$/,
+      exclude: /node_modules/,
+      use: [
+        // { loader: 'style-loader' },
+        {
+          loader: MiniCssExtractPlugin.loader,
+          options: {
+            hmr: true,
+          },
+        },
+        { loader: 'css-loader', options: { modules: true } },
+        { loader: 'sass-loader' },
+      ],
     }],
   },
 };
