@@ -1,0 +1,30 @@
+:local(.main) {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+:local(.info) {
+  flex: 1;
+}
+
+:local(.title) {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+:local(.wrapAvatar) {
+  $size: 50px;
+
+  width: $size;
+  height: $size;
+  margin-right: 20px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+:local(.avatar) {
+  max-width: 100%;
+}

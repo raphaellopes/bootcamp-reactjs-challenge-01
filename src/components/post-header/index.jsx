@@ -1,13 +1,25 @@
 import React from 'react';
 import { string } from 'prop-types';
 
+import styles from './styles.scss';
+
 const PostHeader = ({
   authorName, authorAvatar, postTime, ...props
 }) => (
-  <header {...props}>
-    {authorAvatar && <img src={authorAvatar} alt={`Avatar de ${authorName}`} /> }
-    <h2>{ authorName }</h2>
-    <small>{ postTime }</small>
+  <header className={`post-header ${styles.main}`} {...props}>
+    {authorAvatar && (
+      <div className={styles.wrapAvatar}>
+        <img
+          className={styles.avatar}
+          src={authorAvatar}
+          alt={`Avatar de ${authorName}`}
+        />
+      </div>
+    )}
+    <div className={styles.info}>
+      <h2 className={styles.title}>{ authorName }</h2>
+      <small className="subtitle">{ postTime }</small>
+    </div>
   </header>
 );
 
