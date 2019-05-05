@@ -11,3 +11,11 @@ O resultado visual foi baseado na tela  abaixo:
 ![Feed](/assets/feed.png)
 
 
+## Rodar o projeto local
+
+```
+git clone https://github.com/raphaellopes/bootcamp-reactjs-challenge-01.git
+cd bootcamp-reactjs-challenge-01/
+
+yarn && yarn start
+```
